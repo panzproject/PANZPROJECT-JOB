@@ -1,0 +1,14 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import '@fontsource-variable/inter';
+import './styles/tokens.css';
+import './styles/base.css';
+import './styles/layout.css';
+import './styles/components.css';
+import './styles/pages.css';
+import App from './App';
+import { AppProvider } from './store/AppContext';
+import { ToastProvider } from './components/ui/Toast';
+ReactDOM.createRoot(document.getElementById('root')).render(_jsx(React.StrictMode, { children: _jsx(BrowserRouter, { children: _jsx(ToastProvider, { children: _jsx(AppProvider, { children: _jsx(App, {}) }) }) }) }));
